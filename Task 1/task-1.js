@@ -12,7 +12,11 @@ function solution(S, K) {
 let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 let day_index = days.indexOf(S)
 let final_day = day_index + K
-return days[final_day]
+if (final_day > 6) {
+    let adjusted_day_index = final_day % 7
+     return days[adjusted_day_index];
+}
+return days[final_day];
 }
 
-console.log(solution("Wed", 5));
+console.log(solution("Sat", 23));
