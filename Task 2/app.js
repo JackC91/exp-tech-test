@@ -8,6 +8,14 @@ const PORT = 3000;
 app.use(express.json());
 
 app.get("/users", function (req, res) {
+  let user_name = req.query.name;
+ if(user_name) {
+    return res.json({
+        success: true,
+        status: res.statusCode,
+        payload: getUsers(user_name),
+      });
+  }
   res.json({
     success: true,
     status: res.statusCode,
