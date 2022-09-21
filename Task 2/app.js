@@ -7,7 +7,7 @@ const PORT = 3000;
 
 app.use(express.json());
 
-app.get("/", function (req, res) {
+app.get("/users", function (req, res) {
   res.json({
     success: true,
     status: res.statusCode,
