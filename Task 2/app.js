@@ -1,0 +1,1 @@
+//main page for task 2 solve
